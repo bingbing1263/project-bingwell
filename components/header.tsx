@@ -20,11 +20,11 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
+             <Link href="/about" className="text-gray-600 hover:text-amber-600">
+              About Us
+            </Link>
             <Link href="/products" className="text-gray-600 hover:text-amber-600">
               Products
-            </Link>
-            <Link href="/about" className="text-gray-600 hover:text-amber-600">
-              About Us
             </Link>
             <Link href="/about/design" className="text-gray-600 hover:text-amber-600">
               Design & Production
@@ -49,19 +49,19 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="space-y-4 px-2 pb-3 pt-2">
+            <Link
+                href="/about"
+                className="block px-3 py-2 text-gray-600 hover:text-amber-600"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About Us
+              </Link>
               <Link
                 href="/products"
                 className="block px-3 py-2 text-gray-600 hover:text-amber-600"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Products
-              </Link>
-              <Link
-                href="/about"
-                className="block px-3 py-2 text-gray-600 hover:text-amber-600"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About Us
               </Link>
               <Link
                 href="/about/design"
