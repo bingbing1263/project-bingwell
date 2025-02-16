@@ -21,8 +21,7 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      // 修改为指向 Next.js API 路由
-      const response = await fetch("/api/send-email", {
+      const response = await fetch("https://formspree.io/f/bingwell.guo@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
